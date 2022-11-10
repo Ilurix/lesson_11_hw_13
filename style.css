@@ -1,0 +1,133 @@
+body {
+    margin: 0px;
+    margin: 50px;
+}
+
+.btn {
+    width: 300px;
+    height: 100px;
+    color: black;
+    display: block;
+    margin: 10px 30px 10px 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 1em;
+    background-color: #384563;
+    transition: 0.5s;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    outline: 3px solid transparent;
+    position: relative;
+}
+
+.btn:hover {
+    outline-color: #384563;
+    text-shadow: 0 0 3px blue, 0 0 5px blue;
+    background-color: #4d5f8a;
+    color: #bbbbbb;
+    width: 320px;
+    margin: 10px 10px 10px 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #4d5f8a;
+    border-radius: 1em;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+    ;
+}
+
+.trigger {
+    position: relative;
+    width: 300px;
+    height: 100px;
+}
+
+.trigger:hover .box {
+    transform: translate(140px);
+}
+
+.volume__box {
+    background-color: gray;
+    height: 120px;
+    width: 130px;
+    margin-top: 20px;
+    display: flex;
+    border-radius: 1em;
+    align-items: flex-end;
+}
+
+.volume {
+    background-color: white;
+    width: 30px;
+    max-height: 100px;
+    border-radius: 1em;
+}
+
+.anim1 {
+    margin: 10px 5px 10px 10px;
+    animation: volume1__anim 1.2s linear alternate infinite;
+}
+
+.anim2 {
+    margin: 10px 5px 10px 5px;
+    animation: volume2__anim 0.8s linear alternate infinite;
+}
+
+.anim3 {
+    margin: 10px 10px 10px 5px;
+    animation: volume3__anim 1s linear alternate infinite;
+}
+
+@keyframes volume1__anim {
+    0% {
+        background-color: #0000ff;
+        height: 30px;
+    }
+
+    50% {
+        background-color: #ff00ff;
+    }
+
+    100% {
+        background-color: #ff0000;
+        height: 100px;
+    }
+}
+
+@keyframes volume2__anim {
+    0% {
+        background-color: #ff0000;
+        height: 30px;
+    }
+
+    50% {
+        background-color: #ffff00;
+    }
+
+    100% {
+        background-color: #00ff00;
+        height: 100px;
+    }
+}
+
+@keyframes volume3__anim {
+    0% {
+        background-color: #00ff00;
+        height: 30px;
+    }
+
+    50% {
+        background-color: #00ffff;
+    }
+
+    100% {
+        background-color: #0000ff;
+        height: 100px;
+    }
+}
